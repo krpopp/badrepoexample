@@ -12,7 +12,9 @@ public class CardBehavior : MonoBehaviour
         Deck,
         Hand,
         Selected,
-        Discard
+        Discard,
+        Destroy,
+        NewDeck
     }
 
     private State currentState;
@@ -51,6 +53,7 @@ public class CardBehavior : MonoBehaviour
     float time = 0;
 
     protected virtual void Start(){
+        Debug.Log("Start ran");
         Initialize();
     }
 
