@@ -7,6 +7,8 @@ public class Card : CardBehavior
 
     public AudioClip flipSound;
 
+    public AudioClip goodNewSound;
+
     protected override void OnMouseDown()
     {
         base.OnMouseDown();
