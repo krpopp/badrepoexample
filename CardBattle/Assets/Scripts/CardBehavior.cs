@@ -14,7 +14,9 @@ public class CardBehavior : MonoBehaviour
         Selected,
         Discard,
         Destroy,
-        NewDeck
+        NewDeck,
+        GoodState,
+        BetterState
     }
 
     private State currentState;
