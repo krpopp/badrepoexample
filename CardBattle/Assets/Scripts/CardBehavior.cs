@@ -14,7 +14,8 @@ public class CardBehavior : MonoBehaviour
         Selected,
         Discard,
         Destroy,
-        NewDeck
+        NewDeck,
+        MoreStates
     }
 
     private State currentState;
@@ -79,6 +80,12 @@ public class CardBehavior : MonoBehaviour
         if(myManager.CurrentState == GameManager.State.SelectCard && currentState == State.Hand){
             CurrentState = State.Selected;
         }
+    }
+
+    void FakeFunctions()
+    {
+        Debug.Log("hi");
+        int number = 10;
     }
 
     /// <summary>
