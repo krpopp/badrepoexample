@@ -527,10 +527,14 @@ Transform:
   m_GameObject: {fileID: 855632431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -3.44, y: 1.51, z: 0}
 =======
   m_LocalPosition: {x: 8, y: 3.05, z: 0}
 >>>>>>> 819b486 (Changed diamond sprite, moved diamonds)
+=======
+  m_LocalPosition: {x: 8, y: 3.05, z: 0}
+>>>>>>> main
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -863,10 +867,14 @@ Transform:
   m_GameObject: {fileID: 2005365800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -3.56, y: 3.3, z: 0}
 =======
   m_LocalPosition: {x: -6.67, y: -1.39, z: 0}
 >>>>>>> 819b486 (Changed diamond sprite, moved diamonds)
+=======
+  m_LocalPosition: {x: -6.67, y: -1.39, z: 0}
+>>>>>>> main
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
