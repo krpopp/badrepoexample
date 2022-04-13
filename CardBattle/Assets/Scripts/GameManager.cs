@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public enum State
     {
-        CreateCards,
+        MakeCards,
         Deal,
         SelectCard,
         Resolve,
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         ChangeEnemyText();
-        CurrentState = State.CreateCards;
+        CurrentState = State.MakeCards;
     }
 
     void Update()
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         switch (newState)
         {
-            case State.CreateCards:
+            case State.MakeCards:
                 CreateCards();
                 break;
             case State.Deal:
@@ -270,6 +270,7 @@ public class GameManager : MonoBehaviour
         GameObject currentCard = discard[discard.Count - 1];
         CardBehavior cS = currentCard.GetComponent<CardBehavior>();
         if(cS.MoveCard(transform.position, 3f)){
+            Debug.Log("return card: " + currentCard.name);
             currentCard.GetComponent<SpriteRenderer>().sortingOrder = -(cardCount - deck.Count);
             deck.Add(currentCard);
             currentCard.GetComponent<CardBehavior>().CurrentState = CardBehavior.State.Deck;
