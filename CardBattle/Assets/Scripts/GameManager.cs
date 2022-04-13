@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
                 CleanHand();
                 break;
             case State.Reshuffle:
-                ReturnToDeck();
+                //ReturnToDeck();
                 break;
         }
     }
@@ -266,19 +266,20 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Moves cards back to deck
     /// </summary>
-    private void ReturnToDeck(){
-        GameObject currentCard = discard[discard.Count - 1];
-        CardBehavior cS = currentCard.GetComponent<CardBehavior>();
-        if(cS.MoveCard(transform.position, 3f)){
-            Debug.Log("return card: " + currentCard.name);
-            currentCard.GetComponent<SpriteRenderer>().sortingOrder = -(cardCount - deck.Count);
-            deck.Add(currentCard);
-            currentCard.GetComponent<CardBehavior>().CurrentState = CardBehavior.State.Deck;
-            discard.RemoveAt(discard.Count - 1);
-            if(discard.Count == 0){
-                CurrentState = State.Deal;
-            }
-        }
-    }
+
+    // private void ReturnToDeck(){
+    //     GameObject currentCard = discard[discard.Count - 1];
+    //     CardBehavior cS = currentCard.GetComponent<CardBehavior>();
+    //     if(cS.MoveCard(transform.position, 3f)){
+    //         Debug.Log("return card: " + currentCard.name);
+    //         currentCard.GetComponent<SpriteRenderer>().sortingOrder = -(cardCount - deck.Count);
+    //         deck.Add(currentCard);
+    //         currentCard.GetComponent<CardBehavior>().CurrentState = CardBehavior.State.Deck;
+    //         discard.RemoveAt(discard.Count - 1);
+    //         if(discard.Count == 0){
+    //             CurrentState = State.Deal;
+    //         }
+    //     }
+    // }
 
 }
