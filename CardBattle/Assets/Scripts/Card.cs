@@ -9,6 +9,10 @@ public class Card : CardBehavior
 
     public AudioClip goodNewSound;
 
+    public GameObject diamond;
+
+    public DiamondPlayer diamondPlayer;
+
     protected override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -19,5 +23,13 @@ public class Card : CardBehavior
     {
         base.SelectedChanges();
         GetComponent<AudioSource>().PlayOneShot(flipSound);
+    }
+
+    void FixedUpdate()
+    {
+        float movementHorizontal = Input.GetAxis("Horizontal");
+        float movementVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3 (movementHorizontal, 0f, movementVertical);
     }
 }

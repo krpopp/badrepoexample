@@ -109,8 +109,8 @@ public class GameManager : MonoBehaviour
             case State.CreateCards:
                 CreateCards();
                 break;
-            case State.Deal:
-                break;
+            //case State.Deal:
+                //break;
             case State.SelectCard:
                 break;
             case State.Resolve:
@@ -266,18 +266,18 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Moves cards back to deck
     /// </summary>
-    private void ReturnToDeck(){
-        GameObject currentCard = discard[discard.Count - 1];
-        CardBehavior cS = currentCard.GetComponent<CardBehavior>();
-        if(cS.MoveCard(transform.position, 3f)){
-            currentCard.GetComponent<SpriteRenderer>().sortingOrder = -(cardCount - deck.Count);
-            deck.Add(currentCard);
-            currentCard.GetComponent<CardBehavior>().CurrentState = CardBehavior.State.Deck;
-            discard.RemoveAt(discard.Count - 1);
-            if(discard.Count == 0){
-                CurrentState = State.Deal;
-            }
-        }
-    }
+    // private void ReturnToDeck(){
+    //     GameObject currentCard = discard[discard.Count - 1];
+    //     CardBehavior cS = currentCard.GetComponent<CardBehavior>();
+    //     if(cS.MoveCard(transform.position, 3f)){
+    //         currentCard.GetComponent<SpriteRenderer>().sortingOrder = -(cardCount - deck.Count);
+    //         deck.Add(currentCard);
+    //         currentCard.GetComponent<CardBehavior>().CurrentState = CardBehavior.State.Deck;
+    //         discard.RemoveAt(discard.Count - 1);
+    //         if(discard.Count == 0){
+    //             CurrentState = State.Deal;
+    //         }
+    //     }
+    // }
 
 }
